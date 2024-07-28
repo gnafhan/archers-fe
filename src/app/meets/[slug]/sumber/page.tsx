@@ -321,11 +321,11 @@ const MeetingRoom = () => {
             ) : (
                 <div className='w-full h-full '>
                     <div
-                        ref={videoContainerRef}
+                        // ref={videoContainerRef}
                         id='video-container'
                         className={`w-full h-full`}
                     >
-                        {/* {videoElement} */}
+                        {videoElement} 
                     </div>
                 </div>
             )}

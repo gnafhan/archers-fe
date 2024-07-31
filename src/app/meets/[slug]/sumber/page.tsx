@@ -7,7 +7,7 @@ import { io } from 'socket.io-client'
 
 const serverURL = process.env.NEXT_PUBLIC_SIGNALING_SERVER_URL as string
 
-const socket = io('https://archer.nafhan.site')
+const socket = io(serverURL)
 const peers = new Map<string, RTCPeerConnection>()
 let stream: MediaStream
 

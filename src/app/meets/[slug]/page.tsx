@@ -14,7 +14,7 @@ type videoStreamType = {
 
 const serverURL = process.env.NEXT_PUBLIC_SIGNALING_SERVER_URL as string
 
-const socket = io('https://archer.nafhan.site')
+const socket = io(serverURL)
 const peers = new Map<string, RTCPeerConnection>()
 let stream: MediaStream
 
@@ -375,7 +375,9 @@ const MeetingRoom = () => {
                         {videoStream.length > 0 && (
                             videoStream.map((item)=>{
                                 return(<>
+                                <div className='relative w-full h-full'>
                                 <VideoAI source={item.stream} />
+                                </div>
                                 </>)
                             })
                         )}

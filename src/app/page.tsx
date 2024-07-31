@@ -5,7 +5,7 @@ import { io } from 'socket.io-client'
 
 const serverURL = process.env.NEXT_PUBLIC_SIGNALING_SERVER_URL as string
 
-const socket = io('https://archer.nafhan.site')
+const socket = io(serverURL)
 
 export default function Home() {
     const router = useRouter()
